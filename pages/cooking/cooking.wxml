@@ -1,0 +1,35 @@
+<view class="search-container">
+  <input type="text" bindinput="searchInputEvent" placeholder="今天想吃点什么？"></input>
+  <icon bindtap="searchClickEvent"  type="search" size="20"/>
+</view>
+
+<scroll-view scroll-y="true" style="height:{{scrollHeight}}px"
+  bindscrolltolower="scrollLowerEvent">
+    <view class="common-list" wx:if="{{true}}">
+      <block wx:for="{{cookingList}}" wx:key="id">
+        <view class="list-item" data-bid="{{item.id}}" bindtap="toDetailPage">
+          <view class="index-list-item">
+            <view class="cover">
+              <image class="cover-img" src="{{item.img}}"></image>
+            </view>
+            <view class="content">
+              <p class="title">{{item.name}}</p>
+              <p class="desc">
+                {{item.remark == '' ? '无' : item.remark}}
+              </p>
+              <p class="user">
+                {{item.user_id}} 
+                <p class='zan'>{{item.zan}} ❤️</p>
+              </p>
+            </view>
+          </view>
+        </view>
+      </block>
+
+    </view>
+
+    <view class="refresh-footer" wx:if="{{loadingMore}}">
+      <icon type="waiting" size="30" color="{{footerIconColor}}"  />
+    </view>
+
+</scroll-view>
