@@ -40,9 +40,10 @@ Page({
 
   //搜索按钮点击事件
   searchClickEvent: function (e) {
-    if (!this.data.searchKey) {
-      return;
-    }
+    // if (!this.data.searchKey) {
+    //   return;
+    // }
+    this.setData({ searchKey: e.detail.value });
     this.setData({ pageIndex: 0, cookingList: [] });
     requestData.call(this);
   },

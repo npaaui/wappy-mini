@@ -6,7 +6,7 @@
       <image class="header-img" src="../../image/cooking-header.png" mode="cover"></image>
   </view>
   <view class="search-container">
-    <input type="text" bindinput="searchInputEvent" placeholder="今天，吃点什么好呢？"></input>
+    <input type="text" placeholder="今天，吃点什么好呢？ "confirm-type='search' bindinput='searchClickEvent'></input>
     <icon bindtap="searchClickEvent" type="search" size="20"/>
   </view>
     <view class="common-list" wx:if="{{true}}">
