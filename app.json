@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/cooking/cooking",
+    "pages/cooking-detail/cooking-detail",
     "pages/index/index"
   ],
   "window":{

@@ -1,0 +1,96 @@
+page {
+    background: rgb(255, 255, 255);
+}
+.cover-container {
+    background: rgb(255, 255, 255);
+    text-align: center;
+}
+.cover-container image {
+    display: inline-block;
+    width: 100%;
+    border-radius: 0 0 20rpx 20rpx;
+}
+
+.cooking-meta {
+  position: relative;
+  padding: 30rpx;
+  overflow: hidden;
+}
+
+.cooking-meta .meta-info {
+  margin: 0;
+}
+.meta-info text {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.cooking-name {
+    font-weight: 500;
+    font-size: 50rpx;
+    color: #444444;
+}
+.other-meta {
+    padding-top: 20rpx;
+    color: #888;
+    font-size: 30rpx;
+}
+
+.cooking-intro {
+    margin-bottom: 40rpx;
+    padding: 40rpx;
+    background: #FAFAFA;
+}
+.cooking-intro .intro-header {
+    color: #444;
+    font-size: 35rpx;
+    font-weight: bold;
+    padding: 20rpx 0;
+}
+.cooking-intro .intro-content {
+    font-size: 35rpx;
+    line-height: 2;
+    text-align: justify
+}
+
+
+/*common list*/
+.list-item {
+  position: relative;
+  overflow: hidden
+}
+
+/*index list*/
+.index-list-item {
+  background: #FFF;
+  padding: 15rpx 30rpx;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+.index-list-item:active {
+  background: #EEE;
+}
+.index-list-item .title {
+  margin: 20rpx 0;
+  display: block;
+  width: 100%;
+  font-size: 35rpx;
+  color: #222;
+}
+.index-list-item .cover {
+  display: block;
+  padding: 20rpx 20rpx;
+  width: 100%;
+  overflow: hidden
+}
+.index-list-item .cover image.cover-img {
+  width: 95%;
+  border-radius: 20rpx;
+}
+.index-list-item .content {
+  display: block;
+  width: 100%rpx;
+  padding: 5rpx 20rpx;
+  font-size: 35rpx;
+  color: #444;
+}

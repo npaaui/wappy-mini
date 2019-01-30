@@ -1,0 +1,38 @@
+<view wx:if="{{cookingData}}">
+    <view class="cover-container">
+        <image src="{{cookingData.img}}"></image>
+    </view>
+
+    <view class="cooking-meta">
+        <view class="meta-info">
+            <text class="cooking-name">{{cookingData.name}}</text>
+            <text class="other-meta">by : {{cookingData.user_name}} · {{cookingData.zan}} 人赞过</text>
+        </view>
+    </view>
+
+    <view class="cooking-intro" wx:if="{{cookingData.name}}">
+        <view class="intro-header"><text>简介</text></view>
+        <text class="intro-content">{{cookingData.remark}}</text>
+    </view>
+    <view class="steps" wx:if="{{true}}">
+      <block wx:for="{{cookingData.step}}" wx:key="id">
+        <view class="list-item" data-bid="{{item.id}}">
+          <view class="index-list-item">
+            <view class="title">
+                Step{{item.step}}:
+            </view>
+            <view class="cover">
+              <image class="cover-img" src="{{item.img}}"></image>
+            </view>
+            <view class="content">
+                {{item.content}}
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+</view>
+
+<loading hidden="{{loadidngHidden}}">
+    加载中...
+</loading>
