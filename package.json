@@ -1,0 +1,23 @@
+{
+  "name": "wappy",
+  "version": "1.0.0",
+  "description": "瓦皮人",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npaaui/xi-huan.git"
+  },
+  "author": "wappy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npaaui/xi-huan/issues"
+  },
+  "homepage": "https://github.com/npaaui/xi-huan#readme",
+  "keywords": [],
+  "dependencies": {
+    "lin-ui": "^0.9.12"
+  }
+}

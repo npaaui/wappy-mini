@@ -1,0 +1,94 @@
+/* pages/tools/tools.wxss */
+page {
+  background: rgb(255, 255, 255);
+}
+
+/* userinfo */
+.userinfo {
+  display: flex;
+  width: 100%;
+  height: 160rpx;
+  margin-top: 20rpx;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; 
+}
+
+.login-button {
+  width: 160rpx;
+  height: 80rpx;
+  font-size: 34rpx;
+  color: #444;
+}
+
+.userinfo-customer {
+  width: 100%;
+  height: 120rpx;
+}
+
+.userinfo-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-left: 50rpx;
+  float: left;
+}
+
+.userinfo-show {
+  display: block;
+  width: 400rpx;
+  height: 120rpx;
+  margin-left: 40rpx;
+  float: left;
+}
+
+/* header */
+.tools-header {
+  width: 100%;
+  height: 200rpx;
+  margin-top: 30rpx; 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tools-header .welcome1 {
+  width: 400rpx;
+  height: 100rpx;
+}
+
+.tools-header .welcome2 {
+  width: 400rpx;
+  height: 100rpx;
+}
+
+/* center */
+.tools-center {
+  width: 600rpx;
+  height: 600rpx;
+  margin: 50rpx 75rpx;
+}
+
+.tools-center .tool {
+  width: 200rpx;
+  height: 200rpx;
+  float: left;
+}
+
+.tools-center .tool .tool-img {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 30rpx 60rpx 0rpx;
+}
+
+.tools-center .tool .tool-title {
+  display: block;
+  width: 200rpx;
+  height: 50rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+

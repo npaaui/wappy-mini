@@ -1,15 +1,13 @@
 {
-  "pages":[
-    "pages/cooking/cooking",
-    "pages/cooking-detail/cooking-detail",
-    "pages/index/index"
+  "pages": [
+    "pages/index/index",
+    "pages/article/article"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black",
-    "debug": true
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "borderStyle": "white",
@@ -21,9 +19,9 @@
         "selectedIconPath": "image/icon_center_HL.png"
       },
       {
-        "pagePath": "pages/cooking/cooking",
-        "iconPath": "image/icon_cooking.png",
-        "selectedIconPath": "image/icon_cooking_HL.png"
+        "pagePath": "pages/article/article",
+        "iconPath": "image/icon_tools.png",
+        "selectedIconPath": "image/icon_tools_HL.png"
       }
     ]
   }

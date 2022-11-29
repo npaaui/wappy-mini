@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "札记",
+  "usingComponents": {
+    "l-water-flow":"/miniprogram_npm/lin-ui/water-flow/index",
+    "flow-card":"/components/flow-card/index"
+  }
+}

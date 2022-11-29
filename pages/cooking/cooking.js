@@ -111,5 +111,5 @@ function updateRefreshBall() {
     if (cIndex >= iconColor.length)
       cIndex = 0;
     _this.setData({ footerIconColor: iconColor[cIndex++] });
-  }, 100);
+  }, 300);
 }

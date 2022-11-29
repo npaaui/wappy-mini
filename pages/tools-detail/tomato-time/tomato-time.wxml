@@ -1,0 +1,15 @@
+<!--pages/tools-detail/tomato-time/tomato-time.wxml-->
+<view class="tools-header">
+    <p class='title1'> 选择一个任务 </p>
+    <p class='title2'> 在接下来的时间专注做这件事 </p>
+</view>
+<view class="tools-center">
+  <view class='tool' bindtap="toTomatoTime">
+    <image class='tool-img' src="../../../image/time-book.png" mode="cover"></image>
+    <p class='tool-title'>阅读</p>
+  </view>
+  <view class='tool' bindtap="toTomatoTime">
+    <image class='tool-img' src="../../../image/time-music.png" mode="cover"></image>
+    <p class='tool-title'>琴</p>
+  </view>
+</view>

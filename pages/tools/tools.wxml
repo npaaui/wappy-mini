@@ -1,0 +1,25 @@
+<!--pages/tools/tools.wxml-->
+<view class="tools-header">
+    <image class='welcome1' src="../../image/ynwdsh.png" />
+    <image class='welcome2' src="../../image/wnhk.png" />
+</view>
+<view class="userinfo">
+  <button class="login-button" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登 录 </button>
+  <block wx:else>
+    <view class='userinfo-customer'>
+      <image class="userinfo-avatar" src="{{userInfo.avatar_url}}" mode="cover"></image>
+      <text class="userinfo-show"></text>
+    </view>
+    <!-- <text class="userinfo-nickname">{{userInfo.nick_name}}</text> -->
+  </block>
+</view>
+<view class="tools-center">
+  <view class='tool' bindtap="toTomatoTime">
+    <image class='tool-img' src="../../image/tool-clock.png" mode="cover"></image>
+    <p class='tool-title'>番茄时间</p>
+  </view>
+  <view class='tool' bindtap="toTomatoTime">
+    <image class='tool-img' src="../../image/tool-task.png" mode="cover"></image>
+    <p class='tool-title'>任务列表</p>
+  </view>
+</view>
