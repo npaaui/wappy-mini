@@ -1,30 +1,22 @@
 var utils = require('../utils/util.js'); 
 var api = require('./api.js');
 
+module.exports = {
+  requestLogin: requestLogin,
+  requestUserDetail: requestUserDetail,
+  requestUserInsert: requestUserInsert,
+  requestUserUpdate: requestUserUpdate,
+  requestArticleList: requestArticleList,
+  requestArticleDetail: requestArticleDetail,
+  requestCookingList: requestCookingList,
+  requestCookingDetail: requestCookingDetail
+}
+
 /**
- * 网路请求
+ * 登录
  */
-function request(url, methed, data, successCb, errorCb, completeCb) {
-  wx.request({
-    url: url,
-    method: methed,
-    data: data,
-    success: function (res) {
-      if (res.statusCode == 200)
-        if (res.data.error > 0)
-          console.log(res.data.msg, res); 
-        else
-          utils.isFunction(successCb) && successCb(res.data.data);
-      else
-        console.log('请求异常', res);
-    },
-    error: function () {
-      utils.isFunction(errorCb) && errorCb();
-    },
-    complete: function () {
-      utils.isFunction(completeCb) && completeCb();
-    }
-  });
+function requestLogin(data, successCb, errorCb, completeCb) {
+  request(api.API_LOGIN, 'GET', data, successCb, errorCb, completeCb);
 }
 
 /**
@@ -39,6 +31,13 @@ function requestUserDetail(data, successCb, errorCb, completeCb) {
  */
 function requestUserInsert(data, successCb, errorCb, completeCb) {
   request(api.API_USER, 'POST', data, successCb, errorCb, completeCb);
+}
+
+/**
+ * 修改用户
+ */
+function requestUserUpdate(data, successCb, errorCb, completeCb) {
+  request(api.API_USER, 'PUT', data, successCb, errorCb, completeCb);
 }
 
 /**
@@ -69,12 +68,29 @@ function requestCookingDetail(id, data, successCb, errorCb, completeCb) {
   request(api.API_COOKING_DETAIL.replace(':id', id), 'GET', data, successCb, errorCb, completeCb);
 }
 
-module.exports = {
-  requestUserDetail: requestUserDetail,
-  requestUserInsert: requestUserInsert,
-  requestArticleList: requestArticleList,
-  requestArticleDetail: requestArticleDetail,
-  requestCookingList: requestCookingList,
-  requestCookingDetail: requestCookingDetail
+/**
+ * 网路请求
+ */
+function request(url, methed, data, successCb, errorCb, completeCb) {
+  wx.request({
+    url: url,
+    method: methed,
+    data: data,
+    success: function (res) {
+      if (res.statusCode == 200)
+        if (res.data.error > 0)
+          console.log(res.data.msg, res); 
+        else
+          utils.isFunction(successCb) && successCb(res.data.data);
+      else
+        console.log('请求异常', res);
+    },
+    error: function () {
+      utils.isFunction(errorCb) && errorCb();
+    },
+    complete: function () {
+      utils.isFunction(completeCb) && completeCb();
+    }
+  });
 }
 

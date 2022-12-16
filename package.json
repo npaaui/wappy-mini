@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/npaaui/xi-huan.git"
+    "url": "git+https://github.com/npaaui/wappy.git"
   },
   "author": "wappy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/npaaui/xi-huan/issues"
+    "url": "https://github.com/npaaui/wappy/issues"
   },
-  "homepage": "https://github.com/npaaui/xi-huan#readme",
+  "homepage": "https://github.com/npaaui/wappy#readme",
   "keywords": [],
   "dependencies": {
     "lin-ui": "^0.9.12"

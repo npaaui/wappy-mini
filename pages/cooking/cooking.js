@@ -24,7 +24,6 @@ Page({
   onShow: function () {
     wx.getSystemInfo({
       success: (res) => {
-        console.log(res)
         this.setData({
           scrollHeight: res.windowHeight
           //scrollHeight: res.windowHeight - (100 * res.windowWidth / 750)
@@ -79,7 +78,6 @@ function requestData() {
 
   this.setData({ loadingMore: true, isInit: false });
   updateRefreshBall.call(this);
-  console.log(page)
   requests.requestCookingList({ q: q, page: page }, (data) => {
     if (data.total == 0) {
       //没有记录

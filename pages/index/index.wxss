@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.userinfo-customer {
+.userinfo-avatar {
   flex: 1;
   float: left;
   width: 130rpx;
