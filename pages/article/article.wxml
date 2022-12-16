@@ -1,1 +1,7 @@
-<l-water-flow generic:l-water-flow-item="flow-card"></l-water-flow>
+<view>
+    <l-water-flow generic:l-water-flow-item="flow-card"></l-water-flow>
+    <l-loadmore show="{{loading}}" type="loading" loading-text="正在加载" line="{{true}}">
+	</l-loadmore>
+    <l-loadmore show="{{loadingEnd}}" type="end" end-text="到底了" line="{{true}}">
+	</l-loadmore>
+</view>

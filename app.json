@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/article/article",
-    "pages/writing/writing"
+    "pages/writing/writing",
+    "pages/writing-detail/writing-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,8 +22,8 @@
       },
       {
         "pagePath": "pages/writing/writing",
-        "iconPath": "image/icon_tools.png",
-        "selectedIconPath": "image/icon_tools_HL.png"
+        "iconPath": "image/icon_writing.png",
+        "selectedIconPath": "image/icon_writing_HL.png"
       },
       {
         "pagePath": "pages/article/article",

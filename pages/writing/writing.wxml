@@ -2,37 +2,29 @@
 
 <scroll-view scroll-y="true" style="height:{{scrollHeight}}px"
   bindscrolltolower="scrollLowerEvent">
-  <!-- <view class="writing-header">
-    <image class="header-img" src="../../image/writing-header.png" mode="cover"></image>
-    <text class='header-title'>瓦皮人～</text>
-  </view> -->
   <view class="search-container">
     <input type="text" placeholder="准备看点什么呢？ "confirm-type='search' bindinput='searchClickEvent'></input>
     <icon bindtap="searchClickEvent" type="search" size="20"/>
   </view>
     <view class="common-list" wx:if="{{true}}">
       <block wx:for="{{writingList}}" wx:key="id">
-        <view class="list-item" data-bid="{{item.id}}" bindtap="toDetailPage">
-          <view class="index-list-item">
-            <view class="cover">
-              <image class="cover-img" src="{{item.cover_img}}"></image>
-            </view>
-            <view class="content">
-              <p class="title">{{item.title}}</p>
-              <p class="desc">
-                {{item.intro == '' ? '无' : item.intro}}
-              </p>
-              <p class="user">
-                by.熙欢
-                <p class='zan'>23 <p class='xin'>❤️</p></p>
-              </p>
-            </view>
+        <l-card type="primary" plaintext="{{true}}" title="{{item.title}}"   data-id="{{item.id}}" bindtap="toDetailPage">
+          <view class="content">
+            {{item.intro == '' ? '-' : item.intro}} ...
           </view>
-        </view>
+          <view class="avter-share-container">
+            <view class="like-container">
+                <l-icon name="like" color="#666" size="28" />
+                <view class="number">{{item.read}}</view>
+            </view>
+            <!-- <view class="like-container">
+                <l-icon name="comment" color="#666" size="28" />
+                <view class="number">10</view>
+            </view> -->
+          </view>
+        </l-card>
       </block>
-
     </view>
-
     <view class="refresh-footer" wx:if="{{loadingMore}}">
       <icon type="waiting" size="30" color="{{footerIconColor}}"  />
     </view>

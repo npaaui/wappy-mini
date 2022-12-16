@@ -4,7 +4,7 @@ class article{
 	getArticleList({count=5,page=1}){
 	  return new Promise(resolve => {
 		requests.requestArticleList({ page_size: count, page: page }, (data) => {
-		  this.total_page = Math.ceil(this.total/this.count)
+		  this.total_page = Math.ceil(data.count/count)
 		  resolve({
 			  total:data.count,
 			  count:count,

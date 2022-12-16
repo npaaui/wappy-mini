@@ -56,9 +56,9 @@ Page({
 
   //跳转到详细页面
   toDetailPage: function (e) {
-    var bid = e.currentTarget.dataset.bid; //文章id [data-bid]
+    var id = e.currentTarget.dataset.id; //文章id
     wx.navigateTo({
-      url: '../writing-detail/writing-detail?id=' + bid
+      url: '../writing-detail/writing-detail?id=' + id
     });
   },
 
@@ -78,7 +78,7 @@ function requestData() {
 
   this.setData({ loadingMore: true, isInit: false });
   updateRefreshBall.call(this);
-  requests.requestArticleList({ q: q, page: page }, (data) => {
+  requests.requestArticleList({ page_size: 5, page: page }, (data) => {
     if (data.count == 0) {
       //没有记录
       _this.setData({ totalRecord: 0 });

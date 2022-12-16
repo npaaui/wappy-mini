@@ -1,18 +1,18 @@
 <view wx:if="{{writingData}}">
     <view class="cover-container">
-        <image src="{{writingData.img}}"></image>
+        <image src="{{writingData.cover_img}}"></image>
     </view>
 
     <view class="writing-meta">
         <view class="meta-info">
-            <text class="writing-name">{{writingData.name}}</text>
-            <text class="other-meta">by.{{writingData.user_name}} · {{writingData.zan}} 人赞过</text>
+            <text class="writing-name">{{writingData.title}}</text>
+            <text class="other-meta">by.{{writingData.title}} · {{writingData.read}} 人赞过</text>
         </view>
     </view>
 
-    <view class="writing-intro" wx:if="{{writingData.name}}">
-        <view class="intro-header"><text>简介</text></view>
-        <text class="intro-content">{{writingData.remark}}</text>
+    <view class="writing-intro" wx:if="{{writingData.title}}">
+        <view class="intro-header"><text>笔记</text></view>
+        <text class="intro-content">{{writingData.intro}}</text>
     </view>
     <view class="steps" wx:if="{{true}}">
       <block wx:for="{{writingData.step}}" wx:key="id">

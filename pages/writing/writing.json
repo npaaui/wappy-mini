@@ -1,4 +1,7 @@
 {
-  "navigationBarTitleText": "熙欢",
-  "usingComponents": {}
+  "navigationBarTitleText": "读书笔记",
+  "usingComponents": {
+    "l-card":"/miniprogram_npm/lin-ui/card/index",
+    "l-icon":"/miniprogram_npm/lin-ui/icon/index"
+  }
 }
