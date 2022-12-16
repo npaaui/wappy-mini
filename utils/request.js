@@ -7,9 +7,7 @@ module.exports = {
   requestUserInsert: requestUserInsert,
   requestUserUpdate: requestUserUpdate,
   requestArticleList: requestArticleList,
-  requestArticleDetail: requestArticleDetail,
-  requestCookingList: requestCookingList,
-  requestCookingDetail: requestCookingDetail
+  requestArticleDetail: requestArticleDetail
 }
 
 /**
@@ -52,20 +50,6 @@ function requestArticleList(data, successCb, errorCb, completeCb) {
  */
 function requestArticleDetail(id, data, successCb, errorCb, completeCb) {
   request(api.API_ARTICLE_DETAIL.replace(':id', id), 'GET', data, successCb, errorCb, completeCb);
-}
-
-/**
- * 搜索菜谱
- */
-function requestCookingList(data, successCb, errorCb, completeCb) {
-  request(api.API_COOKING_LIST, 'GET', data, successCb, errorCb, completeCb);
-}
-
-/**
- * 获取菜谱详细信息
- */
-function requestCookingDetail(id, data, successCb, errorCb, completeCb) {
-  request(api.API_COOKING_DETAIL.replace(':id', id), 'GET', data, successCb, errorCb, completeCb);
 }
 
 /**

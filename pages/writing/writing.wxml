@@ -2,29 +2,29 @@
 
 <scroll-view scroll-y="true" style="height:{{scrollHeight}}px"
   bindscrolltolower="scrollLowerEvent">
-  <view class="cooking-header">
-    <image class="header-img" src="../../image/cooking-header.png" mode="cover"></image>
-    <text class='header-title'>美食是能量，是幸福，是珍贵</text>
-  </view>
+  <!-- <view class="writing-header">
+    <image class="header-img" src="../../image/writing-header.png" mode="cover"></image>
+    <text class='header-title'>瓦皮人～</text>
+  </view> -->
   <view class="search-container">
-    <input type="text" placeholder="今天，吃点什么好呢？ "confirm-type='search' bindinput='searchClickEvent'></input>
+    <input type="text" placeholder="准备看点什么呢？ "confirm-type='search' bindinput='searchClickEvent'></input>
     <icon bindtap="searchClickEvent" type="search" size="20"/>
   </view>
     <view class="common-list" wx:if="{{true}}">
-      <block wx:for="{{cookingList}}" wx:key="id">
+      <block wx:for="{{writingList}}" wx:key="id">
         <view class="list-item" data-bid="{{item.id}}" bindtap="toDetailPage">
           <view class="index-list-item">
             <view class="cover">
-              <image class="cover-img" src="{{item.img}}"></image>
+              <image class="cover-img" src="{{item.cover_img}}"></image>
             </view>
             <view class="content">
-              <p class="title">{{item.name}}</p>
+              <p class="title">{{item.title}}</p>
               <p class="desc">
-                {{item.remark == '' ? '无' : item.remark}}
+                {{item.intro == '' ? '无' : item.intro}}
               </p>
               <p class="user">
-                by.{{item.user_name}} 
-                <p class='zan'>{{item.zan}} <p class='xin'>❤️</p></p>
+                by.熙欢
+                <p class='zan'>23 <p class='xin'>❤️</p></p>
               </p>
             </view>
           </view>

@@ -1,4 +1,4 @@
-//cooking.js
+//writing.js
 var requests = require('../../utils/request.js');
 var utils = require('../../utils/util.js');
 var app = getApp();
@@ -12,12 +12,12 @@ Page({
   data: {
     scrollHeight: 0, //scroll-view高度
     pageIndex: 1, //页码
-    totalRecord: 0, //菜谱总数
+    totalRecord: 0, //文章总数
     isInit: true, //是否第一次进入应用
     loadingMore: false, //是否正在加载更多
     footerIconColor: iconColor[0], //下拉刷新球初始颜色
     searchKey: '', //搜索关键字
-    cookingList: []
+    writingList: []
   },
 
   //页面显示获取设备屏幕高度，以适配scroll-view组件高度
@@ -43,7 +43,7 @@ Page({
     //   return;
     // }
     this.setData({ searchKey: e.detail.value });
-    this.setData({ pageIndex: 0, cookingList: [] });
+    this.setData({ pageIndex: 0, writingList: [] });
     requestData.call(this);
   },
 
@@ -56,20 +56,20 @@ Page({
 
   //跳转到详细页面
   toDetailPage: function (e) {
-    var bid = e.currentTarget.dataset.bid; //菜谱id [data-bid]
+    var bid = e.currentTarget.dataset.bid; //文章id [data-bid]
     wx.navigateTo({
-      url: '../cooking-detail/cooking-detail?id=' + bid
+      url: '../writing-detail/writing-detail?id=' + bid
     });
   },
 
   onLoad: function () {
-    //获取烹饪列表
+    //获取文章列表
     requestData.call(this);
   }
 })
 
 /**
- * 请求菜谱列表
+ * 请求文章列表
  */
 function requestData() {
   var _this = this;
@@ -78,15 +78,15 @@ function requestData() {
 
   this.setData({ loadingMore: true, isInit: false });
   updateRefreshBall.call(this);
-  requests.requestCookingList({ q: q, page: page }, (data) => {
-    if (data.total == 0) {
+  requests.requestArticleList({ q: q, page: page }, (data) => {
+    if (data.count == 0) {
       //没有记录
       _this.setData({ totalRecord: 0 });
     } else {
       _this.setData({
-        cookingList: _this.data.cookingList.concat(data.list),
+        writingList: _this.data.writingList.concat(data.list),
         pageIndex: page + 1,
-        totalRecord: data.total
+        totalRecord: data.count
       });
     }
   }, () => {

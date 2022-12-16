@@ -5,7 +5,7 @@ Page({
   data: {
     id: null,
     loadidngHidden: false,
-    cookingData: null
+    writingData: null
   },
   onLoad: function (option) {
     this.setData({
@@ -15,12 +15,12 @@ Page({
   onReady: function () {
     var id = this.data.id;
     var _this = this;
-    requests.requestCookingDetail(
+    requests.requestArticleDetail(
       id,
       { fields: 'image,summary,publisher,title,rating,pubdate,author,author_intro,catalog' },
       (data) => {
         _this.setData({
-          cookingData: data
+          writingData: data
         });
       }, () => {
         wx.navigateBack();

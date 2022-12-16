@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/article/article"
+    "pages/article/article",
+    "pages/writing/writing"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,6 +18,11 @@
         "pagePath": "pages/index/index",
         "iconPath": "image/icon_center.png",
         "selectedIconPath": "image/icon_center_HL.png"
+      },
+      {
+        "pagePath": "pages/writing/writing",
+        "iconPath": "image/icon_tools.png",
+        "selectedIconPath": "image/icon_tools_HL.png"
       },
       {
         "pagePath": "pages/article/article",

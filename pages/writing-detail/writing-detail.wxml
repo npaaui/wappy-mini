@@ -1,21 +1,21 @@
-<view wx:if="{{cookingData}}">
+<view wx:if="{{writingData}}">
     <view class="cover-container">
-        <image src="{{cookingData.img}}"></image>
+        <image src="{{writingData.img}}"></image>
     </view>
 
-    <view class="cooking-meta">
+    <view class="writing-meta">
         <view class="meta-info">
-            <text class="cooking-name">{{cookingData.name}}</text>
-            <text class="other-meta">by.{{cookingData.user_name}} · {{cookingData.zan}} 人赞过</text>
+            <text class="writing-name">{{writingData.name}}</text>
+            <text class="other-meta">by.{{writingData.user_name}} · {{writingData.zan}} 人赞过</text>
         </view>
     </view>
 
-    <view class="cooking-intro" wx:if="{{cookingData.name}}">
+    <view class="writing-intro" wx:if="{{writingData.name}}">
         <view class="intro-header"><text>简介</text></view>
-        <text class="intro-content">{{cookingData.remark}}</text>
+        <text class="intro-content">{{writingData.remark}}</text>
     </view>
     <view class="steps" wx:if="{{true}}">
-      <block wx:for="{{cookingData.step}}" wx:key="id">
+      <block wx:for="{{writingData.step}}" wx:key="id">
         <view class="list-item" data-bid="{{item.id}}">
           <view class="index-list-item">
             <view class="title">

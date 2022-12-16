@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/npaaui/wappy.git"
+    "url": "git+https://github.com/npaaui/wappy-mini.git"
   },
   "author": "wappy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/npaaui/wappy/issues"
+    "url": "https://github.com/npaaui/wappy-mini/issues"
   },
-  "homepage": "https://github.com/npaaui/wappy#readme",
+  "homepage": "https://github.com/npaaui/wappy-mini#readme",
   "keywords": [],
   "dependencies": {
     "lin-ui": "^0.9.12"
